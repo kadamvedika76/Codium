@@ -1,0 +1,15 @@
+# Secrets
+.env
+
+# Environments
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Database
+db.sqlite3
+
+# Media (Uploaded PDFs)
+media/
+quizzes/pdfs/

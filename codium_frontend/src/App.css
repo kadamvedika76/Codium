@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-content {
+  padding-top: 60px; /* Space for navbar */
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+}
+
+.main-content.shifted {
+  margin-left: 280px; /* Shifts content when sidebar opens */
+}

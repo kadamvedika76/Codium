@@ -1,0 +1,140 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #1a1f35; 
+  border-bottom: 2px solid #2d3548;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Changed to space out Left, Center, Right */
+  height: 100%;
+  padding: 0 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #e5e7eb;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.hamburger:hover span {
+  background-color: #34d399;
+}
+
+/* Center Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #e5e7eb;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Right Section Container */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-btn.login {
+  background: transparent;
+  color: #e5e7eb;
+  border: 1px solid #34d399;
+}
+
+.nav-btn.register {
+  background: #34d399;
+  color: #166534;
+  border: none;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* User Profile */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+.user-icon-circle {
+  width: 32px;
+  height: 32px;
+  background: #2d3548;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #34d399;
+  color: #34d399;
+}
+
+/* Theme Toggle (Removed absolute positioning) */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #0f1422;
+  transform: rotate(15deg);
+}
+
+@media (max-width: 768px) {
+  .nav-username { display: none; }
+  .navbar-logo span { display: none; } /* Show only icon on small mobile */
+}

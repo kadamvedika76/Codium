@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ===== LIGHT MODE (Default) ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+  padding: 20px;
+  width: 100%;
+}
+
+.signup-box {
+  background-color:  #e8e8e8;
+  padding: 40px 50px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+input {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  transition: all 0.2s;
+  outline: none;
+  color: #1a1a1a;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+input:focus {
+  border-color: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
+}
+
+.password-box {
+  position: relative;
+  width: 100%;
+}
+
+.password-box input {
+  padding-right: 80px;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.toggle-btn:hover {
+  color: #4ade80;
+}
+
+.signup-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px 32px;
+  margin-top: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  background-color: #86efac;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #166534;
+}
+
+.signup-btn:hover {
+  background-color: #22c55e;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.signup-btn svg {
+  color: currentColor;
+}
+
+.login-text {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #666;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.login-text a {
+  color: #22c55e;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.login-text a:hover {
+  color: #16a34a;
+  text-decoration: underline;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: rotate(180deg) scale(1.1);
+}
+
+.theme-icon {
+  font-size: 24px;
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  background-color: #0a0e1a;
+}
+
+body.dark .signup-box {
+  background-color: #1a1f35;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .logo {
+  color: #e5e7eb;
+}
+
+body.dark .logo h1 {
+  color: #e5e7eb;
+}
+
+body.dark .subtitle {
+  color: #9ca3af;
+}
+
+body.dark label {
+  color: #d1d5db;
+}
+
+body.dark input {
+  background-color: #0f1422;
+  border-color: #2d3548;
+  color: #e5e7eb;
+}
+
+body.dark input::placeholder {
+  color: #6b7280;
+}
+
+body.dark input:focus {
+  border-color: #34d399;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.1);
+}
+
+body.dark .toggle-btn {
+  color: #9ca3af;
+}
+
+body.dark .toggle-btn:hover {
+  color: #34d399;
+}
+
+body.dark .signup-btn {
+  background-color: #059669;
+  color: #ffffff;
+}
+
+body.dark .signup-btn:hover {
+  background-color: #10b981;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+body.dark .login-text {
+  color: #9ca3af;
+}
+
+body.dark .login-text a {
+  color: #34d399;
+}
+
+body.dark .login-text a:hover {
+  color: #10b981;
+}
+
+body.dark .theme-toggle {
+  background-color: #1a1f35;
+}

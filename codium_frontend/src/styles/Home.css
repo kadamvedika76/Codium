@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ===== GENERAL LAYOUT ===== */
+.home-container {
+  min-height: calc(100vh - 60px);
+  background-color: #ffffff;
+  padding: 40px 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Welcome Section */
+.welcome-section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 15px 0;
+  transition: color 0.3s ease;
+}
+
+.welcome-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Features Section Wrapper */
+.features-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 50px;
+  transition: color 0.3s ease;
+}
+
+/* ===== SHARED FEATURE CARD STYLE ===== */
+.feature-card {
+  background-color: #e8e8e8; /* Light Mode Background */
+  border-radius: 20px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: row;
+  min-height: 400px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Feature Content */
+.feature-content {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.feature-icon-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.feature-content h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+}
+
+.feature-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 0 30px 0;
+}
+
+.feature-btn {
+  align-self: flex-start;
+  padding: 14px 30px;
+  background-color: #86efac;
+  color: #166534;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.feature-btn:hover {
+  background-color: #22c55e;
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* Feature Image */
+.feature-image {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 45%;
+  background: linear-gradient(to right, #e8e8e8 0%, transparent 100%);
+}
+
+.feature-card .image-overlay { left: 0; }
+.feature-card.reverse .image-overlay {
+  left: auto;
+  right: 0;
+  background: linear-gradient(to left, #e8e8e8 0%, transparent 100%);
+}
+
+/* ===== PRACTICE HUB (The Single Box) ===== */
+.practice-main-card {
+  display: block; /* Override flex to allow grid inside */
+  padding: 40px;
+  min-height: auto;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.practice-grid.single-item {
+  grid-template-columns: 1fr;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.practice-box {
+  position: relative;
+  height: 220px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.practice-box:hover {
+  transform: scale(1.02);
+}
+
+.box-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 31, 53, 0.7); /* Dark shade to make text pop */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+.practice-box:hover .box-overlay {
+  background: rgba(52, 211, 153, 0.85); /* Green hover */
+}
+
+.box-overlay h4 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.box-overlay p {
+  color: #e5e7eb;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.lock-tag {
+  margin-top: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ===== DARK MODE OVERRIDES ===== */
+body.dark .home-container { background-color: #0a0e1a; }
+body.dark .welcome-section h1, 
+body.dark .features-heading { color: #e5e7eb; }
+body.dark .welcome-subtitle { color: #9ca3af; }
+
+body.dark .feature-card {
+  background-color: #1a1f35;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .feature-content h3 { color: #e5e7eb; }
+body.dark .feature-content p { color: #d1d5db; }
+
+body.dark .feature-btn {
+  background-color: #059669;
+  color: #ffffff;
+}
+
+body.dark .feature-btn:hover { background-color: #10b981; }
+
+body.dark .image-overlay {
+  background: linear-gradient(to right, #1a1f35 0%, transparent 100%);
+}
+
+body.dark .feature-card.reverse .image-overlay {
+  background: linear-gradient(to left, #1a1f35 0%, transparent 100%);
+}
+
+body.dark .box-overlay { background: rgba(10, 14, 26, 0.75); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 968px) {
+  .feature-card, .feature-card.reverse {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .feature-image { height: 300px; }
+  .image-overlay { display: none; }
+  .practice-grid { grid-template-columns: 1fr; }
+  .practice-main-card { padding: 20px; }
+  .welcome-section h1 { font-size: 2.2rem; }
+}

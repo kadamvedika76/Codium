@@ -1,0 +1,126 @@
+.admin-container {
+    min-height: 100vh;
+    padding: 20px 40px;
+    background-color: transparent;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.admin-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Panels */
+.info-panel, .testcase-panel {
+    background-color: #e8e8e8;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+body.dark .info-panel, body.dark .testcase-panel {
+    background-color: #1a1f35;
+}
+
+/* Inputs & Select */
+.info-panel input, .info-panel textarea, .custom-select, .tc-card textarea {
+    width: 100%;
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+body.dark .info-panel input, body.dark .info-panel textarea, body.dark .custom-select, body.dark .tc-card textarea{
+    background-color: #0f1422;
+    border-color: #2d3548;
+    color: #e5e7eb;
+}
+
+.sample-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Test Case Cards */
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-tc-btn {
+    background: #86efac;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tc-list {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.tc-card {
+    background: rgba(255,255,255,0.5);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+body.dark .tc-card {
+    background: rgba(0,0,0,0.2);
+}
+
+.tc-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.delete-tc {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.save-btn {
+    width: auto !important;
+    margin-top: 0 !important;
+}
+
+/* Fix for the Hidden Test Cases text color */
+.testcase-panel h3, .info-panel label {
+    color: #1a1f35; /* Light mode color */
+    transition: color 0.3s ease;
+}
+
+body.dark .testcase-panel h3, 
+body.dark .info-panel label,
+body.dark .tc-header {
+    color: #e5e7eb; /* Dark mode color (off-white) */
+}

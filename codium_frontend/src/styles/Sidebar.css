@@ -1,0 +1,163 @@
+/* 1. BASE SIDEBAR (Hybrid in Light Mode) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background-color: #f5f5f5; /* Light body */
+  border-right: 2px solid #2d3548;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 200;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* HEADER: Always Dark (Matches Navbar regardless of mode) */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1a1f35; /* Same as dark navbar */
+  border-bottom: 2px solid #2d3548;
+  transition: all 0.3s ease;
+}
+
+.sidebar-header h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+  color: #e5e7eb; /* Always light text */
+  transition: color 0.3s ease;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #9ca3af; /* Always light grey */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  background-color: #2d3548;
+  color: #e5e7eb;
+}
+
+/* Light Mode Nav & Footer Styles */
+.sidebar-nav {
+  padding: 20px 0;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.sidebar-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.sidebar-link:hover {
+  background-color: #86efac;
+  border-left: 4px solid #22c55e;
+  padding-left: 16px;
+  color: #166534;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  border-top: 2px solid #e0e0e0;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #86efac;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #166534;
+}
+
+.logout-btn:hover {
+  background-color: #22c55e;
+  color: #ffffff;
+}
+
+/* 2. DARK MODE (Overrides only the Body & Footer) */
+body.dark .sidebar {
+  background-color: #1a1f35;
+}
+
+/* Header is already dark, so we don't need body.dark .sidebar-header overrides anymore */
+
+body.dark .sidebar-link {
+  color: #d1d5db;
+}
+
+body.dark .sidebar-link:hover {
+  background-color: #059669;
+  border-left: 4px solid #10b981;
+  color: #ffffff;
+}
+
+body.dark .sidebar-footer {
+  background-color: #0f1422;
+  border-top: 2px solid #2d3548;
+}
+
+body.dark .logout-btn {
+  background-color: #059669;
+  color: #ffffff;
+}
+
+body.dark .logout-btn:hover {
+  background-color: #10b981;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+}

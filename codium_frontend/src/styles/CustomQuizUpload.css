@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.custom-upload-container {
+    min-height: calc(100vh - 60px);
+    background-color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.upload-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f5f5f5; /* Matches your question-card */
+    border-radius: 12px;
+    padding: 60px 40px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.upload-card h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.upload-card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* File Input Styling */
+.file-upload-section {
+    margin-bottom: 30px;
+}
+
+.custom-file-label {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ffffff;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    color: #1a1a1a;
+}
+
+.custom-file-label:hover {
+    border-color: #22c55e;
+    color: #22c55e;
+}
+
+.file-name-display {
+    margin-top: 10px;
+    display: block;
+    font-size: 0.9rem;
+    color: #22c55e;
+    font-weight: 600;
+}
+
+/* Range/Slider Styling */
+.range-control {
+    max-width: 400px;
+    margin: 0 auto 40px;
+    text-align: left;
+}
+
+.range-control label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.custom-slider {
+    width: 100%;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    outline: none;
+    accent-color: #22c55e;
+}
+
+/* Button Styling (Exact match to .next-btn) */
+.generate-btn {
+    padding: 16px 48px;
+    background-color: #22c55e;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    max-width: 400px;
+}
+
+.generate-btn:hover:not(:disabled) {
+    background-color: #16a34a;
+}
+
+.generate-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Dark Mode */
+body.dark .custom-upload-container {
+    background-color: #0a0e1a;
+}
+
+body.dark .upload-card {
+    background-color: #1a1f35;
+    border-color: #374151;
+}
+
+body.dark .upload-card h2, 
+body.dark .range-control label {
+    color: #e5e7eb;
+}
+
+body.dark .custom-file-label {
+    background-color: #0a0e1a;
+    border-color: #374151;
+    color: #e5e7eb;
+}
+
+body.dark .custom-slider {
+    background: #374151;
+}
